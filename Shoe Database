@@ -1,0 +1,26 @@
+-- Create a shoe database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, heel_height REAL, price INTEGER, color TEXT);
+
+INSERT INTO store VALUES(1, "beach_flats", .5, 22, "black");
+INSERT INTO store VALUES(2, "running_shoes", 0, 48, "gray");
+INSERT INTO store VALUES(3, "pumps", 4.5, 40, "black");
+INSERT INTO store VALUES(4, "wedges", 3, 38, "tan"); 
+INSERT INTO store VALUES(5, "hiking_boots", 1, 39, "brown");
+INSERT INTO store VALUES(6, "slides", 1, 29, "white");
+INSERT INTO store VALUES(7, "sneakers", .25, 35, "white");
+INSERT INTO store VALUES(8, "ankle_boots", 2, 35, "brown");
+INSERT INTO store VALUES(9, "rainboots", .5, 40, "red");
+INSERT INTO store VALUES(10, "sneakers", .25, 35, "black");
+INSERT INTO store VALUES(11, "slides", 1, 29, "tan");
+INSERT INTO store VALUES(12, "running_shoes", 0, 55, "green");
+INSERT INTO store VALUES(13, "hiking_boots", 1, 45, "gray");
+INSERT INTO store VALUES(14, "wedges", 4, 44, "brown");
+INSERT INTO store VALUES(15, "sneakers", 0, 30, "blue"); 
+
+-- Display shoes ordered by price lowest to highest
+SELECT * FROM store 
+ORDER BY price asc
+
+-- Display most popular shoe colors
+SELECT name, color FROM store
